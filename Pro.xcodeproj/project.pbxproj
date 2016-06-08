@@ -9,10 +9,12 @@
 /* Begin PBXBuildFile section */
 		18E51E7A1D06C746000EE6B9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E51E791D06C746000EE6B9 /* main.m */; };
 		18E51E7D1D06C746000EE6B9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E51E7C1D06C746000EE6B9 /* AppDelegate.m */; };
-		18E51E801D06C747000EE6B9 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E51E7F1D06C747000EE6B9 /* ViewController.m */; };
 		18E51E831D06C747000EE6B9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18E51E811D06C747000EE6B9 /* Main.storyboard */; };
 		18E51E851D06C747000EE6B9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18E51E841D06C747000EE6B9 /* Assets.xcassets */; };
 		18E51E881D06C747000EE6B9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18E51E861D06C747000EE6B9 /* LaunchScreen.storyboard */; };
+		18E51E911D06C798000EE6B9 /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E51E901D06C798000EE6B9 /* TableViewController.m */; };
+		18E51E961D073929000EE6B9 /* SimpleTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18E51E951D073929000EE6B9 /* SimpleTableCell.xib */; };
+		18E51E991D0838BF000EE6B9 /* SimpleTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E51E981D0838BF000EE6B9 /* SimpleTableCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,12 +22,15 @@
 		18E51E791D06C746000EE6B9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		18E51E7B1D06C746000EE6B9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		18E51E7C1D06C746000EE6B9 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		18E51E7E1D06C747000EE6B9 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		18E51E7F1D06C747000EE6B9 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		18E51E821D06C747000EE6B9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		18E51E841D06C747000EE6B9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		18E51E871D06C747000EE6B9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		18E51E891D06C747000EE6B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		18E51E8F1D06C798000EE6B9 /* TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TableViewController.h; path = ../TableViewController.h; sourceTree = "<group>"; };
+		18E51E901D06C798000EE6B9 /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TableViewController.m; path = ../TableViewController.m; sourceTree = "<group>"; };
+		18E51E951D073929000EE6B9 /* SimpleTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SimpleTableCell.xib; sourceTree = "<group>"; };
+		18E51E971D0838BF000EE6B9 /* SimpleTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SimpleTableCell.h; path = ../SimpleTableCell.h; sourceTree = "<group>"; };
+		18E51E981D0838BF000EE6B9 /* SimpleTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SimpleTableCell.m; path = ../SimpleTableCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,9 +65,12 @@
 			children = (
 				18E51E7B1D06C746000EE6B9 /* AppDelegate.h */,
 				18E51E7C1D06C746000EE6B9 /* AppDelegate.m */,
-				18E51E7E1D06C747000EE6B9 /* ViewController.h */,
-				18E51E7F1D06C747000EE6B9 /* ViewController.m */,
 				18E51E811D06C747000EE6B9 /* Main.storyboard */,
+				18E51E8F1D06C798000EE6B9 /* TableViewController.h */,
+				18E51E901D06C798000EE6B9 /* TableViewController.m */,
+				18E51E971D0838BF000EE6B9 /* SimpleTableCell.h */,
+				18E51E981D0838BF000EE6B9 /* SimpleTableCell.m */,
+				18E51E951D073929000EE6B9 /* SimpleTableCell.xib */,
 				18E51E841D06C747000EE6B9 /* Assets.xcassets */,
 				18E51E861D06C747000EE6B9 /* LaunchScreen.storyboard */,
 				18E51E891D06C747000EE6B9 /* Info.plist */,
@@ -138,6 +146,7 @@
 			files = (
 				18E51E881D06C747000EE6B9 /* LaunchScreen.storyboard in Resources */,
 				18E51E851D06C747000EE6B9 /* Assets.xcassets in Resources */,
+				18E51E961D073929000EE6B9 /* SimpleTableCell.xib in Resources */,
 				18E51E831D06C747000EE6B9 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -149,8 +158,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				18E51E801D06C747000EE6B9 /* ViewController.m in Sources */,
 				18E51E7D1D06C746000EE6B9 /* AppDelegate.m in Sources */,
+				18E51E911D06C798000EE6B9 /* TableViewController.m in Sources */,
+				18E51E991D0838BF000EE6B9 /* SimpleTableCell.m in Sources */,
 				18E51E7A1D06C746000EE6B9 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

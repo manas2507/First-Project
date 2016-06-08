@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  TableViewController.h
 //  Pro
 //
 //  Created by Apple on 07/06/16.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface TableViewController : UITableViewController
 
 @end
-
