@@ -18,6 +18,24 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    NSURL *Url = [NSURL URLWithString:[NSString stringWithFormat:@"http://www.omdbapi.com/?s=Batman&page=2"]];
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
+        @try {
+            NSData *data = [NSData dataWithContentsOfURL:Url];
+            NSError *error;
+            if (data!=nil) {
+                id jsonData = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
+                NSLog(@"Data: %@", jsonData);
+            }
+        }
+        @catch (NSException *exception) {
+            
+        }
+        @finally {
+            
+        }
+    });
+    
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
@@ -33,7 +51,7 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 1;
+    return 3;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -69,8 +87,6 @@
     cell.thumbnailImageView.image = [UIImage imageNamed:@"IMG_6236.jpg"];
     [cell.button addTarget:self action:@selector(cellButtonWasTapped)
           forControlEvents:UIControlEventTouchUpInside];;
-    
-    
 
 
     return cell;
