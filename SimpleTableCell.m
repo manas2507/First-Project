@@ -10,7 +10,6 @@
 
 @implementation SimpleTableCell
 @synthesize nameLabel = _nameLabel;
-
 @synthesize thumbnailImageView = _thumbnailImageView;
 
 - (void)awakeFromNib {
@@ -22,5 +21,7 @@
 
     // Configure the view for the selected state
 }
+
+
 
 @end
