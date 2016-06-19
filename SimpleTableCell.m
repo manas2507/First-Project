@@ -11,6 +11,7 @@
 @implementation SimpleTableCell
 @synthesize nameLabel = _nameLabel;
 @synthesize thumbnailImageView = _thumbnailImageView;
+@synthesize textArea = _textArea;
 
 - (void)awakeFromNib {
     // Initialization code

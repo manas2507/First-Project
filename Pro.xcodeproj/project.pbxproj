@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1881A1D31D0A6F2000192BD1 /* IMG_6236.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 1881A1D21D0A6F2000192BD1 /* IMG_6236.JPG */; };
+		18749BD71D166E5A00858B85 /* IMG_5327.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 18749BD61D166E5A00858B85 /* IMG_5327.JPG */; };
+		1881A1DB1D0C33C200192BD1 /* Model.m in Sources */ = {isa = PBXBuildFile; fileRef = 1881A1DA1D0C33C200192BD1 /* Model.m */; };
 		18E51E7A1D06C746000EE6B9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E51E791D06C746000EE6B9 /* main.m */; };
 		18E51E7D1D06C746000EE6B9 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E51E7C1D06C746000EE6B9 /* AppDelegate.m */; };
 		18E51E831D06C747000EE6B9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18E51E811D06C747000EE6B9 /* Main.storyboard */; };
@@ -19,7 +20,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1881A1D21D0A6F2000192BD1 /* IMG_6236.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = IMG_6236.JPG; path = "../../manas/CharDham Yatra/Yamunotri/IMG_6236.JPG"; sourceTree = "<group>"; };
+		18749BD61D166E5A00858B85 /* IMG_5327.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_5327.JPG; sourceTree = "<group>"; };
+		1881A1D91D0C33C200192BD1 /* Model.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Model.h; sourceTree = "<group>"; };
+		1881A1DA1D0C33C200192BD1 /* Model.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Model.m; sourceTree = "<group>"; };
 		18E51E751D06C746000EE6B9 /* Pro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		18E51E791D06C746000EE6B9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		18E51E7B1D06C746000EE6B9 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -67,6 +70,8 @@
 			children = (
 				18E51E7B1D06C746000EE6B9 /* AppDelegate.h */,
 				18E51E7C1D06C746000EE6B9 /* AppDelegate.m */,
+				1881A1D91D0C33C200192BD1 /* Model.h */,
+				1881A1DA1D0C33C200192BD1 /* Model.m */,
 				18E51E811D06C747000EE6B9 /* Main.storyboard */,
 				18E51E8F1D06C798000EE6B9 /* TableViewController.h */,
 				18E51E901D06C798000EE6B9 /* TableViewController.m */,
@@ -76,7 +81,7 @@
 				18E51E841D06C747000EE6B9 /* Assets.xcassets */,
 				18E51E861D06C747000EE6B9 /* LaunchScreen.storyboard */,
 				18E51E891D06C747000EE6B9 /* Info.plist */,
-				1881A1D21D0A6F2000192BD1 /* IMG_6236.JPG */,
+				18749BD61D166E5A00858B85 /* IMG_5327.JPG */,
 				18E51E781D06C746000EE6B9 /* Supporting Files */,
 			);
 			path = Pro;
@@ -148,8 +153,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				18E51E881D06C747000EE6B9 /* LaunchScreen.storyboard in Resources */,
-				1881A1D31D0A6F2000192BD1 /* IMG_6236.JPG in Resources */,
 				18E51E851D06C747000EE6B9 /* Assets.xcassets in Resources */,
+				18749BD71D166E5A00858B85 /* IMG_5327.JPG in Resources */,
 				18E51E961D073929000EE6B9 /* SimpleTableCell.xib in Resources */,
 				18E51E831D06C747000EE6B9 /* Main.storyboard in Resources */,
 			);
@@ -166,6 +171,7 @@
 				18E51E911D06C798000EE6B9 /* TableViewController.m in Sources */,
 				18E51E991D0838BF000EE6B9 /* SimpleTableCell.m in Sources */,
 				18E51E7A1D06C746000EE6B9 /* main.m in Sources */,
+				1881A1DB1D0C33C200192BD1 /* Model.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

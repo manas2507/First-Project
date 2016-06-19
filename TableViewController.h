@@ -10,4 +10,8 @@
 
 @interface TableViewController : UITableViewController
 
+@property (strong, nonatomic) NSString *Title;
+@property (strong, nonatomic) NSString *plot;
+@property (strong, nonatomic) NSString *year;
+
 @end

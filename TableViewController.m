@@ -8,8 +8,11 @@
 
 #import "TableViewController.h"
 #import "SimpleTableCell.h"
+#import "Model.h"
 
-@interface TableViewController ()
+@interface TableViewController (){
+    Model *model;
+}
 
 @end
 
@@ -18,14 +21,20 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    NSURL *Url = [NSURL URLWithString:[NSString stringWithFormat:@"http://www.omdbapi.com/?s=Batman&page=2"]];
+    NSURL *Url = [NSURL URLWithString:[NSString stringWithFormat:@"http://www.omdbapi.com/?t=the+last+witch++hunter&y=&plot=short&r=json"]];
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
         @try {
             NSData *data = [NSData dataWithContentsOfURL:Url];
             NSError *error;
             if (data!=nil) {
                 id jsonData = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
-                NSLog(@"Data: %@", jsonData);
+                model = [[Model alloc] initWithDict:jsonData];
+                NSLog(@"Title: %@", model.Title);
+                NSLog(@"Plot: %@", model.plot);
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    [self.tableView reloadData];
+                });
+
             }
         }
         @catch (NSException *exception) {
@@ -36,6 +45,8 @@
         }
     });
     
+    
+
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
@@ -51,11 +62,11 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 3;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 1;
+    return 3;
 }
 
 -(void)cellButtonWasTapped{
@@ -77,14 +88,28 @@
     static NSString *simpleTableIdentifier = @"SimpleTableCell";
     
     SimpleTableCell *cell = (SimpleTableCell *)[tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
+    NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"SimpleTableCell" owner:self options:nil];
+    cell = [nib objectAtIndex:0];
+
     if (cell == nil)
     {
-        NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"SimpleTableCell" owner:self options:nil];
-        cell = [nib objectAtIndex:0];
+        cell = [[SimpleTableCell alloc] init];
     }
     
-    cell.nameLabel.text = @"Hello!";
-    cell.thumbnailImageView.image = [UIImage imageNamed:@"IMG_6236.jpg"];
+    if(model!=nil)
+    {
+        cell.nameLabel.text = [NSString stringWithFormat:@"%@",model.Title];
+        cell.textArea.text = [NSString stringWithFormat:@"%@",model.plot];
+        cell.thumbnailImageView.image = [UIImage imageNamed:[NSString stringWithFormat:@"%li",indexPath.row+1]];
+    }
+    else
+    {
+        cell.nameLabel.text = [NSString stringWithFormat:@"Title %li",indexPath.row+1];
+        cell.textArea.text = [NSString stringWithFormat:@"Plot %li",indexPath.row+1];
+        cell.thumbnailImageView.image = [UIImage imageNamed:[NSString stringWithFormat:@"%li",indexPath.row+1]];
+    }
+    cell.thumbnailImageView.image = [UIImage imageNamed:@"IMG_5327.JPG"];
+    
     [cell.button addTarget:self action:@selector(cellButtonWasTapped)
           forControlEvents:UIControlEventTouchUpInside];;
 
@@ -93,7 +118,7 @@
 }
 
 -(int)heightForRowAtIndexPath:(SimpleTableCell *)SimpleTableCell{
-    return 120;
+    return 260;
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
@@ -101,6 +126,7 @@
     
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
+
 
 
 
